@@ -542,10 +542,10 @@ namespace GeometricApp
                 Results.Add("---Cylinder---");
                 Results.Add("Radius: " + radius + " cm");
                 Results.Add("Length of altitude: " + altitude + " cm");
-                Results.Add("Area of the base: " + baseArea + " cm^2");
-                Results.Add("Volume: " + volume + " cm^3");
-                Results.Add("Area of lateral surface: " + lateralSurface + " cm^2");
-                Results.Add("Surface area: " + surfaceArea + " cm^2");
+                Results.Add("Area of the base: " + baseArea + " cm²");
+                Results.Add("Volume: " + volume + " cm³");
+                Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
+                Results.Add("Surface area: " + surfaceArea + " cm²");
             }
         }
         public double DegreeToRadian(double angle)
@@ -580,10 +580,10 @@ namespace GeometricApp
                 Results.Add("Number of sides(polygon type): " + polygon);
                 Results.Add("Length of base: " + baseLength + " cm");
                 Results.Add("Length of altitude: " + altitude + " cm");
-                Results.Add("Area of the base: " + baseArea + " cm^2");
-                Results.Add("Volume: " + volume + " cm^3");
-                Results.Add("Area of lateral surface: " + lateralSurface + " cm^2");
-                Results.Add("Surface area: " + surfArea + " cm^2");
+                Results.Add("Area of the base: " + baseArea + " cm²");
+                Results.Add("Volume: " + volume + " cm³");
+                Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
+                Results.Add("Surface area: " + surfArea + " cm²");
             }
         }
 
@@ -632,10 +632,10 @@ namespace GeometricApp
                 Results.Add("Radius: " + radius + " cm");
                 Results.Add("Length of 'imaginary' side: " + altitude + " cm");
                 Results.Add("Length of altitude: " + altitude + " cm");
-                Results.Add("Area of the base: " + baseArea + " cm^2");
-                Results.Add("Volume: " + volume + " cm^3");
-                Results.Add("Area of lateral surface: " + lateralSurface + " cm^2");
-                Results.Add("Surface area: " + surfaceArea + " cm^2");
+                Results.Add("Area of the base: " + baseArea + " cm²");
+                Results.Add("Volume: " + volume + " cm³");
+                Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
+                Results.Add("Surface area: " + surfaceArea + " cm²");
             }
         }
         public void Prism()
@@ -659,10 +659,10 @@ namespace GeometricApp
                 Results.Add("Number of sides(polygon type): " + polygon);
                 Results.Add("Length of base: " + baseLength + " cm");
                 Results.Add("Length of altitude: " + altitude + " cm");
-                Results.Add("Area of the base: " + baseArea + " cm^2");
-                Results.Add("Volume: " + volume + " cm^3");
-                Results.Add("Area of lateral surface: " + lateralSurface + " cm^2");
-                Results.Add("Surface area: " + surfArea + " cm^2");
+                Results.Add("Area of the base: " + baseArea + " cm²");
+                Results.Add("Volume: " + volume + " cm³");
+                Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
+                Results.Add("Surface area: " + surfArea + " cm²");
             }
         }
         public void Sphere()
@@ -676,8 +676,8 @@ namespace GeometricApp
                 v_input.Text = Convert.ToString(volume);
                 Results.Add("---Sphere---");
                 Results.Add("Radius: " + radius + " cm");
-                Results.Add("Surface area: " + area + " cm");
-                Results.Add("Volume: " + volume + " cm");
+                Results.Add("Surface area: " + area + " cm²");
+                Results.Add("Volume: " + volume + " cm³");
             }
             else if (a_input.Text != "")
             {
@@ -689,7 +689,7 @@ namespace GeometricApp
                 Results.Add("---Sphere---");
                 Results.Add("Radius: " + radius + " cm");
                 Results.Add("Surface area: " + area + " cm");
-                Results.Add("Volume: " + volume + " cm");
+                Results.Add("Volume: " + volume + " cm³");
             }
             else if (v_input.Text != "")
             {
@@ -700,8 +700,8 @@ namespace GeometricApp
                 r_input.Text = Convert.ToString(radius);
                 Results.Add("---Sphere---");
                 Results.Add("Radius: " + radius + " cm");
-                Results.Add("Surface area: " + area + " cm^2");
-                Results.Add("Volume: " + volume + " cm^3");
+                Results.Add("Surface area: " + area + " cm²");
+                Results.Add("Volume: " + volume + " cm³");
             }
         }
         public void PFrustum() 
@@ -729,11 +729,11 @@ namespace GeometricApp
                 Results.Add("Top side length: " + topLength + " cm");
                 Results.Add("Side of pyramid: " + side + " cm");
                 Results.Add("Altitude: " + altitude + " cm");
-                Results.Add("Top area: " + topArea + " cm^2");
-                Results.Add("Base area: " + baseArea + " cm^2");
-                Results.Add("Volume: " + volume + " cm^3");
-                Results.Add("Lateral surface: " + lateralSurface + " cm^2");
-                Results.Add("Surface area: " + surf_area + " cm^2");
+                Results.Add("Top area: " + topArea + " cm²");
+                Results.Add("Base area: " + baseArea + " cm²");
+                Results.Add("Volume: " + volume + " cm³");
+                Results.Add("Lateral surface: " + lateralSurface + " cm²");
+                Results.Add("Surface area: " + surf_area + " cm²");
             }
             else if (base_input.Text != "" && alt_input.Text != "" && side_input.Text != "")
             {
@@ -755,11 +755,11 @@ namespace GeometricApp
                 Results.Add("Top side length: " + topLength + " cm");
                 Results.Add("Side of pyramid: " + side + " cm");
                 Results.Add("Altitude: " + altitude + " cm");
-                Results.Add("Top area: " + topArea + " cm^2");
-                Results.Add("Base area: " + baseArea + " cm^2");
-                Results.Add("Volume: " + volume + " cm^3");
-                Results.Add("Lateral surface: " + lateralSurface + " cm^2");
-                Results.Add("Surface area: " + surf_area + " cm^2");
+                Results.Add("Top area: " + topArea + " cm²");
+                Results.Add("Base area: " + baseArea + " cm²");
+                Results.Add("Volume: " + volume + " cm³");
+                Results.Add("Lateral surface: " + lateralSurface + " cm²");
+                Results.Add("Surface area: " + surf_area + " cm²");
             }
             if ((base_input.Text != "" && topBase_input.Text != "" && side_input.Text != "") || (base_input.Text != "" && alt_input.Text != "" && side_input.Text != "")){
                 baseArea_input.Text = Convert.ToString(Math.Round(baseArea, 2));
@@ -823,11 +823,11 @@ namespace GeometricApp
                 Results.Add("Base radius: " + baseRadius + " cm");
                 Results.Add("Top radius: " + topRadius + " cm");
                 Results.Add("Generatrix: " + generatrix + " cm");
-                Results.Add("Top area: " + topArea + " cm^2");
-                Results.Add("Base area: " + baseArea + " cm^2");
-                Results.Add("Volume: " + volume + " cm^3");
-                Results.Add("Lateral surface: " + lateralSurface + " cm^2");
-                Results.Add("Surface area: " + surf_area + " cm^2");
+                Results.Add("Top area: " + topArea + " cm²");
+                Results.Add("Base area: " + baseArea + " cm²");
+                Results.Add("Volume: " + volume + " cm³");
+                Results.Add("Lateral surface: " + lateralSurface + " cm²");
+                Results.Add("Surface area: " + surf_area + " cm²");
             }
 
         }

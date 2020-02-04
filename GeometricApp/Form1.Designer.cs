@@ -283,9 +283,9 @@
             this.lscm.ForeColor = System.Drawing.Color.White;
             this.lscm.Location = new System.Drawing.Point(402, 154);
             this.lscm.Name = "lscm";
-            this.lscm.Size = new System.Drawing.Size(36, 15);
+            this.lscm.Size = new System.Drawing.Size(28, 15);
             this.lscm.TabIndex = 26;
-            this.lscm.Text = "cm^2";
+            this.lscm.Text = "cm²";
             // 
             // sacm
             // 
@@ -294,9 +294,9 @@
             this.sacm.ForeColor = System.Drawing.Color.White;
             this.sacm.Location = new System.Drawing.Point(402, 123);
             this.sacm.Name = "sacm";
-            this.sacm.Size = new System.Drawing.Size(36, 15);
+            this.sacm.Size = new System.Drawing.Size(28, 15);
             this.sacm.TabIndex = 27;
-            this.sacm.Text = "cm^2";
+            this.sacm.Text = "cm²";
             // 
             // vcm
             // 
@@ -305,9 +305,9 @@
             this.vcm.ForeColor = System.Drawing.Color.White;
             this.vcm.Location = new System.Drawing.Point(402, 183);
             this.vcm.Name = "vcm";
-            this.vcm.Size = new System.Drawing.Size(36, 15);
+            this.vcm.Size = new System.Drawing.Size(28, 15);
             this.vcm.TabIndex = 28;
-            this.vcm.Text = "cm^3";
+            this.vcm.Text = "cm³";
             // 
             // bacm
             // 
@@ -316,9 +316,9 @@
             this.bacm.ForeColor = System.Drawing.Color.Lime;
             this.bacm.Location = new System.Drawing.Point(402, 65);
             this.bacm.Name = "bacm";
-            this.bacm.Size = new System.Drawing.Size(36, 15);
+            this.bacm.Size = new System.Drawing.Size(28, 15);
             this.bacm.TabIndex = 31;
-            this.bacm.Text = "cm^2";
+            this.bacm.Text = "cm²";
             // 
             // baseArea_input
             // 
@@ -379,9 +379,9 @@
             this.tacm.ForeColor = System.Drawing.Color.White;
             this.tacm.Location = new System.Drawing.Point(402, 96);
             this.tacm.Name = "tacm";
-            this.tacm.Size = new System.Drawing.Size(36, 15);
+            this.tacm.Size = new System.Drawing.Size(28, 15);
             this.tacm.TabIndex = 42;
-            this.tacm.Text = "cm^2";
+            this.tacm.Text = "cm²";
             this.tacm.Visible = false;
             // 
             // topArea_input
@@ -486,7 +486,7 @@
             // saveCalculationsToolStripMenuItem
             // 
             this.saveCalculationsToolStripMenuItem.Name = "saveCalculationsToolStripMenuItem";
-            this.saveCalculationsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveCalculationsToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.saveCalculationsToolStripMenuItem.Text = "Save calculations...";
             this.saveCalculationsToolStripMenuItem.Click += new System.EventHandler(this.SaveCalculationsToolStripMenuItem_Click);
             // 
@@ -507,49 +507,49 @@
             // cylinderToolStripMenuItem
             // 
             this.cylinderToolStripMenuItem.Name = "cylinderToolStripMenuItem";
-            this.cylinderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cylinderToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.cylinderToolStripMenuItem.Text = "Cylinder";
             this.cylinderToolStripMenuItem.Click += new System.EventHandler(this.CylinderToolStripMenuItem_Click);
             // 
             // pyramidToolStripMenuItem
             // 
             this.pyramidToolStripMenuItem.Name = "pyramidToolStripMenuItem";
-            this.pyramidToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pyramidToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.pyramidToolStripMenuItem.Text = "Pyramid";
             this.pyramidToolStripMenuItem.Click += new System.EventHandler(this.PyramidToolStripMenuItem_Click);
             // 
             // coneToolStripMenuItem
             // 
             this.coneToolStripMenuItem.Name = "coneToolStripMenuItem";
-            this.coneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coneToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.coneToolStripMenuItem.Text = "Cone";
             this.coneToolStripMenuItem.Click += new System.EventHandler(this.ConeToolStripMenuItem_Click);
             // 
             // prismToolStripMenuItem
             // 
             this.prismToolStripMenuItem.Name = "prismToolStripMenuItem";
-            this.prismToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prismToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.prismToolStripMenuItem.Text = "Prism";
             this.prismToolStripMenuItem.Click += new System.EventHandler(this.PrismToolStripMenuItem_Click);
             // 
             // sphereToolStripMenuItem
             // 
             this.sphereToolStripMenuItem.Name = "sphereToolStripMenuItem";
-            this.sphereToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sphereToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.sphereToolStripMenuItem.Text = "Sphere";
             this.sphereToolStripMenuItem.Click += new System.EventHandler(this.SphereToolStripMenuItem_Click);
             // 
             // pyramidalFrustumToolStripMenuItem
             // 
             this.pyramidalFrustumToolStripMenuItem.Name = "pyramidalFrustumToolStripMenuItem";
-            this.pyramidalFrustumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pyramidalFrustumToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.pyramidalFrustumToolStripMenuItem.Text = "Pyramidal frustum";
             this.pyramidalFrustumToolStripMenuItem.Click += new System.EventHandler(this.PyramidalFrustumToolStripMenuItem_Click);
             // 
             // conicalFrustumToolStripMenuItem
             // 
             this.conicalFrustumToolStripMenuItem.Name = "conicalFrustumToolStripMenuItem";
-            this.conicalFrustumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.conicalFrustumToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.conicalFrustumToolStripMenuItem.Text = "Conical frustum";
             this.conicalFrustumToolStripMenuItem.Click += new System.EventHandler(this.ConicalFrustumToolStripMenuItem_Click);
             // 
@@ -635,7 +635,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Geometrical Calculator App by Kun Attila v0.9";
+            this.Text = "Geometrical Calculator App by Kun Attila v0.91";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
