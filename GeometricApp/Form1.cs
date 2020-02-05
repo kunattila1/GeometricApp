@@ -19,6 +19,7 @@ namespace GeometricApp
         }
         String[] modes = { "Cylinder", "Pyramid", "Cone", "Prism", "Sphere", "Conical frustum", "Pyramidal frustum" };
         int mode = 1;
+        int calcStep = 1;
         List<string> Results = new List<string>();
         private void CylinderToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -515,13 +516,12 @@ namespace GeometricApp
             {
                 lateralSurface = double.Parse(lsf_input.Text);
                 altitude = double.Parse(alt_input.Text);
-                radius = lateralSurface / (2 * Math.PI * altitude);
+                radius = Math.Round(lateralSurface / (2 * Math.PI * altitude),2);
                 baseArea = Math.Round(2 * Math.PI * Math.Pow(radius, 2), 2);
                 surfaceArea = Math.Round(2 * Math.PI * radius * (radius + altitude), 2);
                 volume = Math.Round(Math.PI * Math.Pow(radius, 2) * altitude, 2);
-                a_input.Text = Convert.ToString(surfaceArea);
-                r_input.Text = Convert.ToString(Math.Round(radius, 2));
-                baseArea_input.Text = Convert.ToString(baseArea);
+                
+                r_input.Text = Convert.ToString(radius);
                 v_input.Text = Convert.ToString(volume);
             }
             else if (r_input.Text != "" && lsf_input.Text != "")
@@ -532,20 +532,36 @@ namespace GeometricApp
                 baseArea = Math.Round(2 * Math.PI * Math.Pow(radius, 2), 2);
                 surfaceArea = Math.Round(2 * Math.PI * radius * (radius + altitude), 2);
                 volume = Math.Round(Math.PI * Math.Pow(radius, 2) * altitude, 2);
-                a_input.Text = Convert.ToString(surfaceArea);
                 alt_input.Text = Convert.ToString(Math.Round(altitude, 2));
                 baseArea_input.Text = Convert.ToString(baseArea);
-                v_input.Text = Convert.ToString(volume);
+                
             }
-            if ((r_input.Text != "" && alt_input.Text != "") || alt_input.Text != "" && lsf_input.Text != "" || r_input.Text != "" && lsf_input.Text != "")
+            else if (r_input.Text != "" && v_input.Text != "")
             {
-                Results.Add("---Cylinder---");
+                radius = double.Parse(r_input.Text);
+                volume = double.Parse(v_input.Text);
+                baseArea = Math.Round(2 * Math.PI * Math.Pow(radius, 2), 2);
+                altitude = Math.Round(volume / baseArea);
+                lateralSurface = Math.Round(2 * Math.PI * radius * altitude, 2);
+                surfaceArea = Math.Round(2 * Math.PI * radius * (radius + altitude), 2);
+                alt_input.Text = Convert.ToString(altitude);
+                baseArea_input.Text = Convert.ToString(baseArea);
+                lsf_input.Text = Convert.ToString(lateralSurface);
+            }
+            if ((r_input.Text != "" && alt_input.Text != "") || (alt_input.Text != "" && lsf_input.Text != "") || (r_input.Text != "" && lsf_input.Text != "") || (r_input.Text != "" && v_input.Text != ""))
+            {
+                Results.Add(calcStep+". Cylinder | " + name_input.Text);
+                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Radius: " + radius + " cm");
                 Results.Add("Length of altitude: " + altitude + " cm");
                 Results.Add("Area of the base: " + baseArea + " cm²");
                 Results.Add("Volume: " + volume + " cm³");
                 Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
                 Results.Add("Surface area: " + surfaceArea + " cm²");
+                Results.Add("--------------------------");
+                a_input.Text = Convert.ToString(surfaceArea);
+                v_input.Text = Convert.ToString(volume);
+                calcStep++;
             }
         }
         public double DegreeToRadian(double angle)
@@ -576,7 +592,8 @@ namespace GeometricApp
                 baseArea_input.Text = Convert.ToString(baseArea);
                 a_input.Text = Convert.ToString(baseArea + lateralSurface);
                 v_input.Text = Convert.ToString(volume);
-                Results.Add("---Pyramid---");
+                Results.Add(calcStep + ". Pyramid | " + name_input.Text);
+                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Number of sides(polygon type): " + polygon);
                 Results.Add("Length of base: " + baseLength + " cm");
                 Results.Add("Length of altitude: " + altitude + " cm");
@@ -584,6 +601,8 @@ namespace GeometricApp
                 Results.Add("Volume: " + volume + " cm³");
                 Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
                 Results.Add("Surface area: " + surfArea + " cm²");
+                Results.Add("--------------------------");
+                calcStep++;
             }
         }
 
@@ -628,7 +647,8 @@ namespace GeometricApp
                 side_input.Text = Convert.ToString(side);
                 baseArea_input.Text = Convert.ToString(baseArea);
                 v_input.Text = Convert.ToString(volume);
-                Results.Add("---Cone---");
+                Results.Add(calcStep+". Cone | " + name_input.Text);
+                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Radius: " + radius + " cm");
                 Results.Add("Length of 'imaginary' side: " + altitude + " cm");
                 Results.Add("Length of altitude: " + altitude + " cm");
@@ -636,6 +656,8 @@ namespace GeometricApp
                 Results.Add("Volume: " + volume + " cm³");
                 Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
                 Results.Add("Surface area: " + surfaceArea + " cm²");
+                Results.Add("--------------------------");
+                calcStep++;
             }
         }
         public void Prism()
@@ -655,7 +677,8 @@ namespace GeometricApp
                 lsf_input.Text = Convert.ToString(lateralSurface);
                 a_input.Text = Convert.ToString(surfArea);
                 v_input.Text = Convert.ToString(volume);
-                Results.Add("---Prism---");
+                Results.Add(calcStep+". Prism | " + name_input.Text);
+                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Number of sides(polygon type): " + polygon);
                 Results.Add("Length of base: " + baseLength + " cm");
                 Results.Add("Length of altitude: " + altitude + " cm");
@@ -663,54 +686,55 @@ namespace GeometricApp
                 Results.Add("Volume: " + volume + " cm³");
                 Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
                 Results.Add("Surface area: " + surfArea + " cm²");
+                Results.Add("--------------------------");
+                calcStep++;
             }
         }
         public void Sphere()
         {
+            double area = 0, radius = 0, volume = 0;
             if(r_input.Text != "")
             {
-                double radius = double.Parse(r_input.Text);
-                double area = Math.Round(4 * Math.Pow(radius, 2) * Math.PI,2);
-                double volume = Math.Round(4 * Math.PI * Math.Pow(radius, 3) / 3,2);
+                radius = double.Parse(r_input.Text);
+                area = Math.Round(4 * Math.Pow(radius, 2) * Math.PI,2);
+                volume = Math.Round(4 * Math.PI * Math.Pow(radius, 3) / 3,2);
                 a_input.Text = Convert.ToString(area);
                 v_input.Text = Convert.ToString(volume);
-                Results.Add("---Sphere---");
-                Results.Add("Radius: " + radius + " cm");
-                Results.Add("Surface area: " + area + " cm²");
-                Results.Add("Volume: " + volume + " cm³");
             }
             else if (a_input.Text != "")
             {
-                double area = double.Parse(a_input.Text);
-                double radius = Math.Round(Math.Sqrt(area/(4 * Math.PI)), 2);
-                double volume = Math.Round((4 * Math.Pow(radius, 3) * Math.PI) / 3, 2);
+                area = double.Parse(a_input.Text);
+                radius = Math.Round(Math.Sqrt(area/(4 * Math.PI)), 2);
+                volume = Math.Round((4 * Math.Pow(radius, 3) * Math.PI) / 3, 2);
                 r_input.Text = Convert.ToString(radius);
                 v_input.Text = Convert.ToString(volume);
-                Results.Add("---Sphere---");
-                Results.Add("Radius: " + radius + " cm");
-                Results.Add("Surface area: " + area + " cm");
-                Results.Add("Volume: " + volume + " cm³");
             }
             else if (v_input.Text != "")
             {
-                double volume = double.Parse(v_input.Text);
-                double radius = Math.Round(Math.Pow(volume*3/(4* Math.PI),(double)1/3), 2);
-                double area = Math.Round(4 * Math.Pow(radius, 2) * Math.PI, 2);
+                volume = double.Parse(v_input.Text);
+                radius = Math.Round(Math.Pow(volume*3/(4* Math.PI),(double)1/3), 2);
+                area = Math.Round(4 * Math.Pow(radius, 2) * Math.PI, 2);
                 a_input.Text = Convert.ToString(area);
                 r_input.Text = Convert.ToString(radius);
-                Results.Add("---Sphere---");
+            }
+            if ((r_input.Text != "") || (v_input.Text != "") || (a_input.Text != ""))
+            {
+                Results.Add(calcStep + ". Sphere | " + name_input.Text);
+                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Radius: " + radius + " cm");
                 Results.Add("Surface area: " + area + " cm²");
                 Results.Add("Volume: " + volume + " cm³");
+                Results.Add("--------------------------");
+                calcStep++;
             }
         }
         public void PFrustum() 
         {
-            double baseArea = 0, topArea = 0, lateralSurface = 0, surf_area = 0, volume = 0;
+            double baseArea = 0, topArea = 0, lateralSurface = 0, surf_area = 0, volume = 0,topLength = 0,baseLength = 0;
             if (base_input.Text != "" && topBase_input.Text != "" && side_input.Text != "")
             {
-                double baseLength = double.Parse(base_input.Text);
-                double topLength = double.Parse(topBase_input.Text);
+                baseLength = double.Parse(base_input.Text);
+                topLength = double.Parse(topBase_input.Text);
                 double side = double.Parse(side_input.Text);
                 double thirdsideSmall = Math.Sqrt(2 * Math.Pow(topLength,2));  /*this means the diagonal of the smaller square, 
                 * top of the trapezium inside which we're gonna use to calculate the altitude */
@@ -724,24 +748,13 @@ namespace GeometricApp
                 lateralSurface = Math.Round(4 * areaOfTrapezium,2); 
                 surf_area = Math.Round(topArea + baseArea + areaOfTrapezium * 4,2);
                 alt_input.Text = Convert.ToString(Math.Round(altitude, 2));
-                Results.Add("---Pyramidal Frustum---");
-                Results.Add("Base length: " + baseLength + " cm");
-                Results.Add("Top side length: " + topLength + " cm");
-                Results.Add("Side of pyramid: " + side + " cm");
-                Results.Add("Altitude: " + altitude + " cm");
-                Results.Add("Top area: " + topArea + " cm²");
-                Results.Add("Base area: " + baseArea + " cm²");
-                Results.Add("Volume: " + volume + " cm³");
-                Results.Add("Lateral surface: " + lateralSurface + " cm²");
-                Results.Add("Surface area: " + surf_area + " cm²");
             }
             else if (base_input.Text != "" && alt_input.Text != "" && side_input.Text != "")
             {
-                // case when we give base, side, altitude comes here
-                double baseLength = double.Parse(base_input.Text);
+                baseLength = double.Parse(base_input.Text);
                 double side = double.Parse(side_input.Text);
                 double altitude = double.Parse(alt_input.Text);
-                double topLength = baseLength / 2;
+                topLength = baseLength / 2;
                 topArea = Math.Round(Math.Pow(topLength, 2), 2);
                 baseArea = Math.Round(Math.Pow(baseLength, 2), 2);
                 double areaOfTrapezium = Math.Round((baseLength + topLength) / 2 * altitude, 2);
@@ -750,7 +763,15 @@ namespace GeometricApp
                 surf_area = Math.Round(topArea + baseArea + areaOfTrapezium * 4, 2);
                 side_input.Text = Convert.ToString(Math.Round(side, 2));
                 topBase_input.Text = Convert.ToString(Math.Round(topLength, 2));
-                Results.Add("---Pyramidal Frustum---");
+            }
+            if ((base_input.Text != "" && topBase_input.Text != "" && side_input.Text != "") || (base_input.Text != "" && alt_input.Text != "" && side_input.Text != "")){
+                baseArea_input.Text = Convert.ToString(Math.Round(baseArea, 2));
+                topArea_input.Text = Convert.ToString(Math.Round(topArea, 2));
+                lsf_input.Text = Convert.ToString(Math.Round(lateralSurface, 2));
+                a_input.Text = Convert.ToString(Math.Round(surf_area));
+                v_input.Text = Convert.ToString(Math.Round(volume, 2));
+                Results.Add(calcStep+ ". Pyramidal Frustum|" + name_input.Text);
+                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Base length: " + baseLength + " cm");
                 Results.Add("Top side length: " + topLength + " cm");
                 Results.Add("Side of pyramid: " + side + " cm");
@@ -760,16 +781,10 @@ namespace GeometricApp
                 Results.Add("Volume: " + volume + " cm³");
                 Results.Add("Lateral surface: " + lateralSurface + " cm²");
                 Results.Add("Surface area: " + surf_area + " cm²");
+                Results.Add("--------------------------");
+                calcStep++;
             }
-            if ((base_input.Text != "" && topBase_input.Text != "" && side_input.Text != "") || (base_input.Text != "" && alt_input.Text != "" && side_input.Text != "")){
-                baseArea_input.Text = Convert.ToString(Math.Round(baseArea, 2));
-                topArea_input.Text = Convert.ToString(Math.Round(topArea, 2));
-                lsf_input.Text = Convert.ToString(Math.Round(lateralSurface, 2));
-                a_input.Text = Convert.ToString(Math.Round(surf_area));
-                v_input.Text = Convert.ToString(Math.Round(volume, 2)); }
-
         }
-
         public void CFrustum()
         {
             double baseArea = 0, topArea = 0, lateralSurface = 0, surf_area = 0, volume = 0, baseRadius=0, topRadius = 0, generatrix = 0, altitude =0;
@@ -820,6 +835,8 @@ namespace GeometricApp
                 a_input.Text = Convert.ToString(surf_area);
                 v_input.Text = Convert.ToString(volume);
                 Results.Add("---Conical Frustum---");
+                Results.Add("---" + name_input.Text + "---");
+                Results.Add(DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss"));
                 Results.Add("Base radius: " + baseRadius + " cm");
                 Results.Add("Top radius: " + topRadius + " cm");
                 Results.Add("Generatrix: " + generatrix + " cm");
@@ -828,12 +845,12 @@ namespace GeometricApp
                 Results.Add("Volume: " + volume + " cm³");
                 Results.Add("Lateral surface: " + lateralSurface + " cm²");
                 Results.Add("Surface area: " + surf_area + " cm²");
+                Results.Add("--------------------------");
             }
-
         }
-
         private void Clear_Click(object sender, EventArgs e)
         {
+            name_input.Text = "";
             r_input.Text = "";
             alt_input.Text = "";
             base_input.Text = "";
@@ -846,7 +863,6 @@ namespace GeometricApp
             a_input.Text = "";
             p_input.Text = "";
         }
-
         private void SaveCalculationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();

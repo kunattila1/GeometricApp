@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GeometricApp.exe" size="1860008">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GeometricApp.exe" size="1863080">
       <assemblyIdentity name="GeometricApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OZ2aBLeeBmc3raA9D9M+Pu8/TzicpMFbd4ZhWt1pEsA=</dsig:DigestValue>
+        <dsig:DigestValue>XvCBJRCWpVWoA+nHGXD+QlCmXDSAohJV2LRc3SzkwRM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

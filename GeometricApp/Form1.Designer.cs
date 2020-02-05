@@ -78,6 +78,14 @@
             this.calcHist = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.currentMode = new System.Windows.Forms.Label();
+            this.name_input = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.unitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,7 +105,7 @@
             this.polygon.AutoSize = true;
             this.polygon.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.polygon.ForeColor = System.Drawing.Color.White;
-            this.polygon.Location = new System.Drawing.Point(7, 93);
+            this.polygon.Location = new System.Drawing.Point(3, 93);
             this.polygon.Name = "polygon";
             this.polygon.Size = new System.Drawing.Size(61, 15);
             this.polygon.TabIndex = 1;
@@ -108,7 +116,7 @@
             // 
             this.lat_surf.AutoSize = true;
             this.lat_surf.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lat_surf.ForeColor = System.Drawing.Color.White;
+            this.lat_surf.ForeColor = System.Drawing.Color.Lime;
             this.lat_surf.Location = new System.Drawing.Point(202, 151);
             this.lat_surf.Name = "lat_surf";
             this.lat_surf.Size = new System.Drawing.Size(89, 15);
@@ -120,7 +128,7 @@
             this.surf_area.AutoSize = true;
             this.surf_area.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.surf_area.ForeColor = System.Drawing.Color.White;
-            this.surf_area.Location = new System.Drawing.Point(213, 123);
+            this.surf_area.Location = new System.Drawing.Point(214, 123);
             this.surf_area.Name = "surf_area";
             this.surf_area.Size = new System.Drawing.Size(77, 15);
             this.surf_area.TabIndex = 3;
@@ -130,8 +138,8 @@
             // 
             this.volume.AutoSize = true;
             this.volume.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.volume.ForeColor = System.Drawing.Color.White;
-            this.volume.Location = new System.Drawing.Point(240, 183);
+            this.volume.ForeColor = System.Drawing.Color.Lime;
+            this.volume.Location = new System.Drawing.Point(242, 178);
             this.volume.Name = "volume";
             this.volume.Size = new System.Drawing.Size(48, 15);
             this.volume.TabIndex = 5;
@@ -150,7 +158,10 @@
             // 
             // r_input
             // 
+            this.r_input.BackColor = System.Drawing.Color.DimGray;
+            this.r_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.r_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.r_input.ForeColor = System.Drawing.SystemColors.Window;
             this.r_input.Location = new System.Drawing.Point(70, 62);
             this.r_input.Name = "r_input";
             this.r_input.Size = new System.Drawing.Size(100, 21);
@@ -158,7 +169,10 @@
             // 
             // p_input
             // 
+            this.p_input.BackColor = System.Drawing.Color.DimGray;
+            this.p_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.p_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.p_input.ForeColor = System.Drawing.SystemColors.Window;
             this.p_input.Location = new System.Drawing.Point(70, 90);
             this.p_input.Name = "p_input";
             this.p_input.Size = new System.Drawing.Size(100, 21);
@@ -167,7 +181,10 @@
             // 
             // lsf_input
             // 
+            this.lsf_input.BackColor = System.Drawing.Color.DimGray;
+            this.lsf_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lsf_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lsf_input.ForeColor = System.Drawing.SystemColors.Window;
             this.lsf_input.Location = new System.Drawing.Point(296, 148);
             this.lsf_input.Name = "lsf_input";
             this.lsf_input.Size = new System.Drawing.Size(100, 21);
@@ -175,9 +192,13 @@
             // 
             // a_input
             // 
+            this.a_input.BackColor = System.Drawing.Color.DimGray;
+            this.a_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.a_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.a_input.ForeColor = System.Drawing.SystemColors.Window;
             this.a_input.Location = new System.Drawing.Point(296, 119);
             this.a_input.Name = "a_input";
+            this.a_input.ReadOnly = true;
             this.a_input.Size = new System.Drawing.Size(100, 21);
             this.a_input.TabIndex = 14;
             // 
@@ -186,7 +207,7 @@
             this.altitude.AutoSize = true;
             this.altitude.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.altitude.ForeColor = System.Drawing.Color.Lime;
-            this.altitude.Location = new System.Drawing.Point(23, 120);
+            this.altitude.Location = new System.Drawing.Point(18, 121);
             this.altitude.Name = "altitude";
             this.altitude.Size = new System.Drawing.Size(47, 15);
             this.altitude.TabIndex = 16;
@@ -194,7 +215,10 @@
             // 
             // alt_input
             // 
+            this.alt_input.BackColor = System.Drawing.Color.DimGray;
+            this.alt_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.alt_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.alt_input.ForeColor = System.Drawing.SystemColors.Window;
             this.alt_input.Location = new System.Drawing.Point(70, 117);
             this.alt_input.Name = "alt_input";
             this.alt_input.Size = new System.Drawing.Size(100, 21);
@@ -202,7 +226,10 @@
             // 
             // v_input
             // 
+            this.v_input.BackColor = System.Drawing.Color.DimGray;
+            this.v_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.v_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.v_input.ForeColor = System.Drawing.SystemColors.Window;
             this.v_input.Location = new System.Drawing.Point(296, 177);
             this.v_input.Name = "v_input";
             this.v_input.Size = new System.Drawing.Size(100, 21);
@@ -222,7 +249,10 @@
             // 
             // base_input
             // 
+            this.base_input.BackColor = System.Drawing.Color.DimGray;
+            this.base_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.base_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.base_input.ForeColor = System.Drawing.SystemColors.Window;
             this.base_input.Location = new System.Drawing.Point(70, 145);
             this.base_input.Name = "base_input";
             this.base_input.Size = new System.Drawing.Size(100, 21);
@@ -234,7 +264,7 @@
             this.button2.BackColor = System.Drawing.Color.Green;
             this.button2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(138, 276);
+            this.button2.Location = new System.Drawing.Point(106, 282);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 53);
             this.button2.TabIndex = 21;
@@ -280,7 +310,7 @@
             // 
             this.lscm.AutoSize = true;
             this.lscm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lscm.ForeColor = System.Drawing.Color.White;
+            this.lscm.ForeColor = System.Drawing.Color.Lime;
             this.lscm.Location = new System.Drawing.Point(402, 154);
             this.lscm.Name = "lscm";
             this.lscm.Size = new System.Drawing.Size(28, 15);
@@ -302,7 +332,7 @@
             // 
             this.vcm.AutoSize = true;
             this.vcm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.vcm.ForeColor = System.Drawing.Color.White;
+            this.vcm.ForeColor = System.Drawing.Color.Lime;
             this.vcm.Location = new System.Drawing.Point(402, 183);
             this.vcm.Name = "vcm";
             this.vcm.Size = new System.Drawing.Size(28, 15);
@@ -313,7 +343,7 @@
             // 
             this.bacm.AutoSize = true;
             this.bacm.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bacm.ForeColor = System.Drawing.Color.Lime;
+            this.bacm.ForeColor = System.Drawing.Color.White;
             this.bacm.Location = new System.Drawing.Point(402, 65);
             this.bacm.Name = "bacm";
             this.bacm.Size = new System.Drawing.Size(28, 15);
@@ -322,9 +352,13 @@
             // 
             // baseArea_input
             // 
+            this.baseArea_input.BackColor = System.Drawing.Color.DimGray;
+            this.baseArea_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.baseArea_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.baseArea_input.ForeColor = System.Drawing.SystemColors.Window;
             this.baseArea_input.Location = new System.Drawing.Point(296, 65);
             this.baseArea_input.Name = "baseArea_input";
+            this.baseArea_input.ReadOnly = true;
             this.baseArea_input.Size = new System.Drawing.Size(100, 21);
             this.baseArea_input.TabIndex = 30;
             // 
@@ -332,8 +366,8 @@
             // 
             this.baseArea.AutoSize = true;
             this.baseArea.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.baseArea.ForeColor = System.Drawing.Color.Lime;
-            this.baseArea.Location = new System.Drawing.Point(224, 68);
+            this.baseArea.ForeColor = System.Drawing.Color.White;
+            this.baseArea.Location = new System.Drawing.Point(227, 68);
             this.baseArea.Name = "baseArea";
             this.baseArea.Size = new System.Drawing.Size(64, 15);
             this.baseArea.TabIndex = 29;
@@ -353,7 +387,10 @@
             // 
             // side_input
             // 
+            this.side_input.BackColor = System.Drawing.Color.DimGray;
+            this.side_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.side_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.side_input.ForeColor = System.Drawing.SystemColors.Window;
             this.side_input.Location = new System.Drawing.Point(70, 172);
             this.side_input.Name = "side_input";
             this.side_input.Size = new System.Drawing.Size(100, 21);
@@ -386,7 +423,10 @@
             // 
             // topArea_input
             // 
+            this.topArea_input.BackColor = System.Drawing.Color.DimGray;
+            this.topArea_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.topArea_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.topArea_input.ForeColor = System.Drawing.SystemColors.Window;
             this.topArea_input.Location = new System.Drawing.Point(296, 93);
             this.topArea_input.Name = "topArea_input";
             this.topArea_input.Size = new System.Drawing.Size(100, 21);
@@ -398,7 +438,7 @@
             this.topArea.AutoSize = true;
             this.topArea.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.topArea.ForeColor = System.Drawing.Color.White;
-            this.topArea.Location = new System.Drawing.Point(227, 96);
+            this.topArea.Location = new System.Drawing.Point(236, 96);
             this.topArea.Name = "topArea";
             this.topArea.Size = new System.Drawing.Size(55, 15);
             this.topArea.TabIndex = 40;
@@ -419,7 +459,10 @@
             // 
             // topBase_input
             // 
+            this.topBase_input.BackColor = System.Drawing.Color.DimGray;
+            this.topBase_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.topBase_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.topBase_input.ForeColor = System.Drawing.SystemColors.Window;
             this.topBase_input.Location = new System.Drawing.Point(70, 199);
             this.topBase_input.Name = "topBase_input";
             this.topBase_input.Size = new System.Drawing.Size(100, 21);
@@ -443,7 +486,7 @@
             this.clear.BackColor = System.Drawing.Color.Maroon;
             this.clear.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clear.ForeColor = System.Drawing.Color.White;
-            this.clear.Location = new System.Drawing.Point(281, 276);
+            this.clear.Location = new System.Drawing.Point(249, 282);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(75, 53);
             this.clear.TabIndex = 49;
@@ -467,10 +510,11 @@
             this.menuStrip1.BackColor = System.Drawing.Color.DarkGray;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.modesToolStripMenuItem});
+            this.modesToolStripMenuItem,
+            this.unitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(732, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(727, 24);
             this.menuStrip1.TabIndex = 51;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -555,7 +599,9 @@
             // 
             // calcHist
             // 
-            this.calcHist.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.calcHist.BackColor = System.Drawing.Color.DimGray;
+            this.calcHist.Font = new System.Drawing.Font("Noto Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.calcHist.ForeColor = System.Drawing.SystemColors.Window;
             this.calcHist.Location = new System.Drawing.Point(453, 63);
             this.calcHist.Name = "calcHist";
             this.calcHist.ReadOnly = true;
@@ -587,12 +633,79 @@
             this.currentMode.Text = "Cylinder";
             this.currentMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // name_input
+            // 
+            this.name_input.BackColor = System.Drawing.Color.DimGray;
+            this.name_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.name_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.name_input.ForeColor = System.Drawing.SystemColors.Window;
+            this.name_input.Location = new System.Drawing.Point(164, 34);
+            this.name_input.Name = "name_input";
+            this.name_input.Size = new System.Drawing.Size(100, 21);
+            this.name_input.TabIndex = 55;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.Color.Lime;
+            this.label4.Location = new System.Drawing.Point(114, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 15);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Name:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // unitToolStripMenuItem
+            // 
+            this.unitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mmToolStripMenuItem,
+            this.cmToolStripMenuItem,
+            this.dmToolStripMenuItem,
+            this.mToolStripMenuItem,
+            this.kmToolStripMenuItem});
+            this.unitToolStripMenuItem.Name = "unitToolStripMenuItem";
+            this.unitToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.unitToolStripMenuItem.Text = "Unit";
+            // 
+            // mmToolStripMenuItem
+            // 
+            this.mmToolStripMenuItem.Name = "mmToolStripMenuItem";
+            this.mmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mmToolStripMenuItem.Text = "mm";
+            // 
+            // cmToolStripMenuItem
+            // 
+            this.cmToolStripMenuItem.Name = "cmToolStripMenuItem";
+            this.cmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cmToolStripMenuItem.Text = "cm";
+            // 
+            // dmToolStripMenuItem
+            // 
+            this.dmToolStripMenuItem.Name = "dmToolStripMenuItem";
+            this.dmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dmToolStripMenuItem.Text = "dm";
+            // 
+            // mToolStripMenuItem
+            // 
+            this.mToolStripMenuItem.Name = "mToolStripMenuItem";
+            this.mToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mToolStripMenuItem.Text = "m";
+            // 
+            // kmToolStripMenuItem
+            // 
+            this.kmToolStripMenuItem.Name = "kmToolStripMenuItem";
+            this.kmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kmToolStripMenuItem.Text = "km";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(732, 348);
+            this.ClientSize = new System.Drawing.Size(727, 347);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.name_input);
             this.Controls.Add(this.currentMode);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.calcHist);
@@ -635,7 +748,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Geometrical Calculator App by Kun Attila v0.91";
+            this.Text = "Geometrical Calculator App by Kun Attila v0.92";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -694,6 +807,14 @@
         private System.Windows.Forms.ToolStripMenuItem pyramidalFrustumToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem conicalFrustumToolStripMenuItem;
         public System.Windows.Forms.Label currentMode;
+        private System.Windows.Forms.TextBox name_input;
+        public System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripMenuItem unitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kmToolStripMenuItem;
     }
 }
 
