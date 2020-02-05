@@ -469,30 +469,50 @@ namespace GeometricApp
             surf_area.ForeColor = Color.FromArgb(255, 255, 255);
             sacm.ForeColor = Color.FromArgb(255, 255, 255);
         }
+
+        private void autoscroll()
+        {
+            calcHist.SelectionStart = calcHist.Text.Length;
+            calcHist.ScrollToCaret();
+        }
         public void Button2_Click(object sender, EventArgs e) // Calculate it button
         {
             switch (mode)
             {
                 case 1:
-                    Cylinder(); calcHist.Lines = Results.ToArray();
+                    Cylinder();
+                    calcHist.Lines = Results.ToArray();
+                    autoscroll();
                     break;
                 case 2:
-                    Pyramid(); calcHist.Lines = Results.ToArray();
+                    Pyramid();
+                    calcHist.Lines = Results.ToArray();
+                    autoscroll();
                     break;
                 case 3:
-                    Cone(); calcHist.Lines = Results.ToArray();
+                    Cone();
+                    calcHist.Lines = Results.ToArray();
+                    autoscroll();
                     break;
                 case 4:
-                    Prism(); calcHist.Lines = Results.ToArray();
+                    Prism();
+                    calcHist.Lines = Results.ToArray();
+                    autoscroll();
                     break;
                 case 5:
-                    Sphere(); calcHist.Lines = Results.ToArray();
+                    Sphere();
+                    calcHist.Lines = Results.ToArray();
+                    autoscroll();
                     break;
                 case 6:
-                    CFrustum(); calcHist.Lines = Results.ToArray();
+                    CFrustum();
+                    calcHist.Lines = Results.ToArray();
+                    autoscroll();
                     break;
                 case 7:
-                    PFrustum(); calcHist.Lines = Results.ToArray();
+                    PFrustum();
+                    calcHist.Lines = Results.ToArray();
+                    autoscroll();
                     break;
                 default: break;
 

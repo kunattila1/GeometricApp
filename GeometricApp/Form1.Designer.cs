@@ -751,6 +751,7 @@
             this.Controls.Add(this.polygon);
             this.Controls.Add(this.radius);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Geometrical Calculator App by Kun Attila v0.93";
