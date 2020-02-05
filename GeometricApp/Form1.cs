@@ -18,7 +18,9 @@ namespace GeometricApp
             InitializeComponent();
         }
         String[] modes = { "Cylinder", "Pyramid", "Cone", "Prism", "Sphere", "Conical frustum", "Pyramidal frustum" };
+        String[] units = { "mm", "cm", "dm", "m", "km" };
         int mode = 1;
+        int unit = 1;
         int calcStep = 1;
         List<string> Results = new List<string>();
         private void CylinderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -496,6 +498,104 @@ namespace GeometricApp
 
             }
         }
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            name_input.Text = "";
+            r_input.Text = "";
+            alt_input.Text = "";
+            base_input.Text = "";
+            side_input.Text = "";
+            topArea_input.Text = "";
+            topBase_input.Text = "";
+            baseArea_input.Text = "";
+            lsf_input.Text = "";
+            v_input.Text = "";
+            a_input.Text = "";
+            p_input.Text = "";
+        }
+        private void SaveCalculationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Text File|*.txt";
+            sfd.FileName = "Calculations";
+            sfd.Title = "Save Text File";
+            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                StreamWriter sw = new StreamWriter(sfd.FileName);
+                foreach (string x in Results) sw.WriteLine(x);
+                sw.Close();
+            }
+        }
+        private void MmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unit = 0;
+            rcm.Text = "mm";
+            altcm.Text = "mm";
+            bcm.Text = "mm";
+            scm.Text = "mm";
+            tbcm.Text = "mm";
+            bacm.Text = "mm²";
+            tacm.Text = "mm²";
+            sacm.Text = "mm²";
+            lscm.Text = "mm²";
+            vcm.Text = "mm³";
+        }
+        private void CmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unit = 1;
+            rcm.Text = "cm";
+            altcm.Text = "cm";
+            bcm.Text = "cm";
+            scm.Text = "cm";
+            tbcm.Text = "cm";
+            bacm.Text = "cm²";
+            tacm.Text = "cm²";
+            sacm.Text = "cm²";
+            lscm.Text = "cm²";
+            vcm.Text = "cm³";
+        }
+        private void DmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unit = 2;
+            rcm.Text = "dm";
+            altcm.Text = "dm";
+            bcm.Text = "dm";
+            scm.Text = "dm";
+            tbcm.Text = "dm";
+            bacm.Text = "dm²";
+            tacm.Text = "dm²";
+            sacm.Text = "dm²";
+            lscm.Text = "dm²";
+            vcm.Text = "dm³";
+        }
+        private void MToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unit = 3;
+            rcm.Text = "m";
+            altcm.Text = "m";
+            bcm.Text = "m";
+            scm.Text = "m";
+            tbcm.Text = "m";
+            bacm.Text = "m²";
+            tacm.Text = "m²";
+            sacm.Text = "m²";
+            lscm.Text = "m²";
+            vcm.Text = "m³";
+        }
+        private void KmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            unit = 4;
+            rcm.Text = "km";
+            altcm.Text = "km";
+            bcm.Text = "km";
+            scm.Text = "km";
+            tbcm.Text = "km";
+            bacm.Text = "km²";
+            tacm.Text = "km²";
+            sacm.Text = "km²";
+            lscm.Text = "km²";
+            vcm.Text = "km³";
+        }
         public void Cylinder()
         {
             double surfaceArea = 0, lateralSurface = 0, radius = 0, altitude = 0, baseArea = 0, volume = 0;
@@ -552,12 +652,12 @@ namespace GeometricApp
             {
                 Results.Add(calcStep+". Cylinder | " + name_input.Text);
                 Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
-                Results.Add("Radius: " + radius + " cm");
-                Results.Add("Length of altitude: " + altitude + " cm");
-                Results.Add("Area of the base: " + baseArea + " cm²");
-                Results.Add("Volume: " + volume + " cm³");
-                Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
-                Results.Add("Surface area: " + surfaceArea + " cm²");
+                Results.Add("Radius: " + radius + " " + units[unit]);
+                Results.Add("Length of altitude: " + altitude + " " + units[unit]);
+                Results.Add("Area of the base: " + baseArea + " " + units[unit] + "²");
+                Results.Add("Volume: " + volume + " " + units[unit] + "³");
+                Results.Add("Area of lateral surface: " + lateralSurface + " " + units[unit] + "²");
+                Results.Add("Surface area: " + surfaceArea + " " + units[unit] + "²");
                 Results.Add("--------------------------");
                 a_input.Text = Convert.ToString(surfaceArea);
                 v_input.Text = Convert.ToString(volume);
@@ -595,12 +695,12 @@ namespace GeometricApp
                 Results.Add(calcStep + ". Pyramid | " + name_input.Text);
                 Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Number of sides(polygon type): " + polygon);
-                Results.Add("Length of base: " + baseLength + " cm");
-                Results.Add("Length of altitude: " + altitude + " cm");
-                Results.Add("Area of the base: " + baseArea + " cm²");
-                Results.Add("Volume: " + volume + " cm³");
-                Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
-                Results.Add("Surface area: " + surfArea + " cm²");
+                Results.Add("Length of base: " + baseLength + " " + units[unit]);
+                Results.Add("Length of altitude: " + altitude + " " + units[unit]);
+                Results.Add("Area of the base: " + baseArea + " " + units[unit] + "²");
+                Results.Add("Volume: " + volume + " " + units[unit] + "³");
+                Results.Add("Area of lateral surface: " + lateralSurface + " " + units[unit] + "²");
+                Results.Add("Surface area: " + surfArea + " " + units[unit] + "²");
                 Results.Add("--------------------------");
                 calcStep++;
             }
@@ -649,13 +749,13 @@ namespace GeometricApp
                 v_input.Text = Convert.ToString(volume);
                 Results.Add(calcStep+". Cone | " + name_input.Text);
                 Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
-                Results.Add("Radius: " + radius + " cm");
-                Results.Add("Length of 'imaginary' side: " + altitude + " cm");
-                Results.Add("Length of altitude: " + altitude + " cm");
-                Results.Add("Area of the base: " + baseArea + " cm²");
-                Results.Add("Volume: " + volume + " cm³");
-                Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
-                Results.Add("Surface area: " + surfaceArea + " cm²");
+                Results.Add("Radius: " + radius + " " + units[unit]);
+                Results.Add("Length of 'imaginary' side: " + altitude + " " + units[unit]);
+                Results.Add("Length of altitude: " + altitude + " " + units[unit]);
+                Results.Add("Area of the base: " + baseArea + " " + units[unit] + "²");
+                Results.Add("Volume: " + volume + " " + units[unit] + "³");
+                Results.Add("Area of lateral surface: " + lateralSurface + " " + units[unit] + "²");
+                Results.Add("Surface area: " + surfaceArea + " " + units[unit] + "²");
                 Results.Add("--------------------------");
                 calcStep++;
             }
@@ -680,12 +780,12 @@ namespace GeometricApp
                 Results.Add(calcStep+". Prism | " + name_input.Text);
                 Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Number of sides(polygon type): " + polygon);
-                Results.Add("Length of base: " + baseLength + " cm");
-                Results.Add("Length of altitude: " + altitude + " cm");
-                Results.Add("Area of the base: " + baseArea + " cm²");
-                Results.Add("Volume: " + volume + " cm³");
-                Results.Add("Area of lateral surface: " + lateralSurface + " cm²");
-                Results.Add("Surface area: " + surfArea + " cm²");
+                Results.Add("Length of base: " + baseLength + " " + units[unit]);
+                Results.Add("Length of altitude: " + altitude + " " + units[unit]);
+                Results.Add("Area of the base: " + baseArea + " " + units[unit] + "²");
+                Results.Add("Volume: " + volume + " " + units[unit] + "³");
+                Results.Add("Area of lateral surface: " + lateralSurface + " " + units[unit] + "²");
+                Results.Add("Surface area: " + surfArea + " " + units[unit] + "²");
                 Results.Add("--------------------------");
                 calcStep++;
             }
@@ -721,9 +821,9 @@ namespace GeometricApp
             {
                 Results.Add(calcStep + ". Sphere | " + name_input.Text);
                 Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
-                Results.Add("Radius: " + radius + " cm");
-                Results.Add("Surface area: " + area + " cm²");
-                Results.Add("Volume: " + volume + " cm³");
+                Results.Add("Radius: " + radius + " " + units[unit]);
+                Results.Add("Surface area: " + area + " " + units[unit] + "²");
+                Results.Add("Volume: " + volume + " " + units[unit] + "³");
                 Results.Add("--------------------------");
                 calcStep++;
             }
@@ -772,15 +872,15 @@ namespace GeometricApp
                 v_input.Text = Convert.ToString(Math.Round(volume, 2));
                 Results.Add(calcStep+ ". Pyramidal Frustum|" + name_input.Text);
                 Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
-                Results.Add("Base length: " + baseLength + " cm");
-                Results.Add("Top side length: " + topLength + " cm");
-                Results.Add("Side of pyramid: " + side + " cm");
-                Results.Add("Altitude: " + altitude + " cm");
-                Results.Add("Top area: " + topArea + " cm²");
-                Results.Add("Base area: " + baseArea + " cm²");
-                Results.Add("Volume: " + volume + " cm³");
-                Results.Add("Lateral surface: " + lateralSurface + " cm²");
-                Results.Add("Surface area: " + surf_area + " cm²");
+                Results.Add("Base length: " + baseLength + " " + units[unit]);
+                Results.Add("Top side length: " + topLength + " " + units[unit]);
+                Results.Add("Side of pyramid: " + side + " " + units[unit]);
+                Results.Add("Altitude: " + altitude + " " + units[unit]);
+                Results.Add("Top area: " + topArea + " "+ units[unit] + "²");
+                Results.Add("Base area: " + baseArea + " " + units[unit] + "²");
+                Results.Add("Volume: " + volume + " " + units[unit] + "³");
+                Results.Add("Lateral surface: " + lateralSurface + " " + units[unit] + "²");
+                Results.Add("Surface area: " + surf_area + " " + units[unit] + "²");
                 Results.Add("--------------------------");
                 calcStep++;
             }
@@ -837,43 +937,15 @@ namespace GeometricApp
                 Results.Add("---Conical Frustum---");
                 Results.Add("---" + name_input.Text + "---");
                 Results.Add(DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss"));
-                Results.Add("Base radius: " + baseRadius + " cm");
-                Results.Add("Top radius: " + topRadius + " cm");
-                Results.Add("Generatrix: " + generatrix + " cm");
-                Results.Add("Top area: " + topArea + " cm²");
-                Results.Add("Base area: " + baseArea + " cm²");
-                Results.Add("Volume: " + volume + " cm³");
-                Results.Add("Lateral surface: " + lateralSurface + " cm²");
-                Results.Add("Surface area: " + surf_area + " cm²");
+                Results.Add("Base radius: " + baseRadius + " " + units[unit]);
+                Results.Add("Top radius: " + topRadius + " " + units[unit]);
+                Results.Add("Generatrix: " + generatrix + " " + units[unit]);
+                Results.Add("Top area: " + topArea + " " + units[unit] + "²");
+                Results.Add("Base area: " + baseArea + " " + units[unit] + "²");
+                Results.Add("Volume: " + volume + " " + units[unit] + "³");
+                Results.Add("Lateral surface: " + lateralSurface + " " + units[unit] + "²");
+                Results.Add("Surface area: " + surf_area + " " + units[unit] + "²");
                 Results.Add("--------------------------");
-            }
-        }
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            name_input.Text = "";
-            r_input.Text = "";
-            alt_input.Text = "";
-            base_input.Text = "";
-            side_input.Text = "";
-            topArea_input.Text = "";
-            topBase_input.Text = "";
-            baseArea_input.Text = "";
-            lsf_input.Text = "";
-            v_input.Text = "";
-            a_input.Text = "";
-            p_input.Text = "";
-        }
-        private void SaveCalculationsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Text File|*.txt";
-            sfd.FileName = "Calculations";
-            sfd.Title = "Save Text File";
-            if (sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                StreamWriter sw = new StreamWriter(sfd.FileName);
-                foreach (string x in Results) sw.WriteLine(x);
-                sw.Close();
             }
         }
     }

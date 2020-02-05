@@ -673,30 +673,35 @@
             this.mmToolStripMenuItem.Name = "mmToolStripMenuItem";
             this.mmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mmToolStripMenuItem.Text = "mm";
+            this.mmToolStripMenuItem.Click += new System.EventHandler(this.MmToolStripMenuItem_Click);
             // 
             // cmToolStripMenuItem
             // 
             this.cmToolStripMenuItem.Name = "cmToolStripMenuItem";
             this.cmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cmToolStripMenuItem.Text = "cm";
+            this.cmToolStripMenuItem.Click += new System.EventHandler(this.CmToolStripMenuItem_Click);
             // 
             // dmToolStripMenuItem
             // 
             this.dmToolStripMenuItem.Name = "dmToolStripMenuItem";
             this.dmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dmToolStripMenuItem.Text = "dm";
+            this.dmToolStripMenuItem.Click += new System.EventHandler(this.DmToolStripMenuItem_Click);
             // 
             // mToolStripMenuItem
             // 
             this.mToolStripMenuItem.Name = "mToolStripMenuItem";
             this.mToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mToolStripMenuItem.Text = "m";
+            this.mToolStripMenuItem.Click += new System.EventHandler(this.MToolStripMenuItem_Click);
             // 
             // kmToolStripMenuItem
             // 
             this.kmToolStripMenuItem.Name = "kmToolStripMenuItem";
             this.kmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kmToolStripMenuItem.Text = "km";
+            this.kmToolStripMenuItem.Click += new System.EventHandler(this.KmToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -748,7 +753,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Geometrical Calculator App by Kun Attila v0.92";
+            this.Text = "Geometrical Calculator App by Kun Attila v0.93";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
