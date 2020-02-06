@@ -877,17 +877,17 @@ namespace GeometricApp
         }
         public void PFrustum() 
         {
-            double baseArea = 0, topArea = 0, lateralSurface = 0, surf_area = 0, volume = 0,topLength = 0,baseLength = 0;
+            double baseArea = 0, topArea = 0, lateralSurface = 0, surf_area = 0, volume = 0,topLength = 0,baseLength = 0, side = 0, altitude = 0;
             if (base_input.Text != "" && topBase_input.Text != "" && side_input.Text != "")
             {
                 baseLength = double.Parse(base_input.Text);
                 topLength = double.Parse(topBase_input.Text);
-                double side = double.Parse(side_input.Text);
+               side = double.Parse(side_input.Text);
                 double thirdsideSmall = Math.Sqrt(2 * Math.Pow(topLength,2));  /*this means the diagonal of the smaller square, 
                 * top of the trapezium inside which we're gonna use to calculate the altitude */
                 double thirdsideLarge = Math.Sqrt(2 * Math.Pow(baseLength, 2)); // this means the diagonal of the larger square / hypotenuse of larger triangle
                 double baseOfTriangle = (thirdsideLarge - thirdsideSmall) / 2;
-                double altitude = Math.Round(Math.Sqrt(Math.Pow(side, 2) - Math.Pow(baseOfTriangle, 2)),2);
+                altitude = Math.Round(Math.Sqrt(Math.Pow(side, 2) - Math.Pow(baseOfTriangle, 2)),2);
                 topArea = Math.Round(Math.Pow(topLength, 2),2);
                 baseArea = Math.Round(Math.Pow(baseLength, 2),2);
                 double areaOfTrapezium = Math.Round((baseLength + topLength) / 2 * altitude,2);
@@ -899,8 +899,8 @@ namespace GeometricApp
             else if (base_input.Text != "" && alt_input.Text != "" && side_input.Text != "")
             {
                 baseLength = double.Parse(base_input.Text);
-                double side = double.Parse(side_input.Text);
-                double altitude = double.Parse(alt_input.Text);
+                side = double.Parse(side_input.Text);
+                altitude = double.Parse(alt_input.Text);
                 topLength = baseLength / 2;
                 topArea = Math.Round(Math.Pow(topLength, 2), 2);
                 baseArea = Math.Round(Math.Pow(baseLength, 2), 2);
@@ -917,7 +917,7 @@ namespace GeometricApp
                 lsf_input.Text = Convert.ToString(Math.Round(lateralSurface, 2));
                 a_input.Text = Convert.ToString(Math.Round(surf_area));
                 v_input.Text = Convert.ToString(Math.Round(volume, 2));
-                Results.Add(calcStep+ ". Pyramidal Frustum|" + name_input.Text);
+                Results.Add(calcStep+ ". Pyramidal Frustum | " + name_input.Text);
                 Results.Add(DateTime.Now.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Base length: " + baseLength + " " + units[unit]);
                 Results.Add("Top side length: " + topLength + " " + units[unit]);
@@ -981,9 +981,8 @@ namespace GeometricApp
                 lsf_input.Text = Convert.ToString(lateralSurface);
                 a_input.Text = Convert.ToString(surf_area);
                 v_input.Text = Convert.ToString(volume);
-                Results.Add("---Conical Frustum---");
-                Results.Add("---" + name_input.Text + "---");
-                Results.Add(DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss"));
+                Results.Add(calcStep + ". Conical Frustum | " + name_input.Text);
+                Results.Add(DateTime.Now.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Base radius: " + baseRadius + " " + units[unit]);
                 Results.Add("Top radius: " + topRadius + " " + units[unit]);
                 Results.Add("Generatrix: " + generatrix + " " + units[unit]);
