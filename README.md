@@ -1,8 +1,6 @@
-# GeometricApp
-An app written in C# (Windows Forms, .NET FW 4.7.2 that can calulate area, volume, etc. off the datas of the base, side, altitude, etc. of various geometrical bodies. It's still being developed :)
 # Images
-![Cylinder](https://files.catbox.moe/dme8ji.PNG)
-![Conical Frustum + Sphere](https://files.catbox.moe/cxj1lq.PNG)
+![Cylinder](https://files.catbox.moe/urdr08.PNG)
+![Conical Frustum + Sphere](https://files.catbox.moe/90bnnh.PNG)
 # TO-DO
 - Connect to a database
 # Version history
