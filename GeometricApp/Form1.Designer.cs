@@ -75,17 +75,17 @@
             this.sphereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pyramidalFrustumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conicalFrustumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calcHist = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.currentMode = new System.Windows.Forms.Label();
-            this.name_input = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.unitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calcHist = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.currentMode = new System.Windows.Forms.Label();
+            this.name_input = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -597,6 +597,53 @@
             this.conicalFrustumToolStripMenuItem.Text = "Conical frustum";
             this.conicalFrustumToolStripMenuItem.Click += new System.EventHandler(this.ConicalFrustumToolStripMenuItem_Click);
             // 
+            // unitToolStripMenuItem
+            // 
+            this.unitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mmToolStripMenuItem,
+            this.cmToolStripMenuItem,
+            this.dmToolStripMenuItem,
+            this.mToolStripMenuItem,
+            this.kmToolStripMenuItem});
+            this.unitToolStripMenuItem.Name = "unitToolStripMenuItem";
+            this.unitToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.unitToolStripMenuItem.Text = "Unit";
+            // 
+            // mmToolStripMenuItem
+            // 
+            this.mmToolStripMenuItem.Name = "mmToolStripMenuItem";
+            this.mmToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.mmToolStripMenuItem.Text = "mm";
+            this.mmToolStripMenuItem.Click += new System.EventHandler(this.MmToolStripMenuItem_Click);
+            // 
+            // cmToolStripMenuItem
+            // 
+            this.cmToolStripMenuItem.Name = "cmToolStripMenuItem";
+            this.cmToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.cmToolStripMenuItem.Text = "cm";
+            this.cmToolStripMenuItem.Click += new System.EventHandler(this.CmToolStripMenuItem_Click);
+            // 
+            // dmToolStripMenuItem
+            // 
+            this.dmToolStripMenuItem.Name = "dmToolStripMenuItem";
+            this.dmToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.dmToolStripMenuItem.Text = "dm";
+            this.dmToolStripMenuItem.Click += new System.EventHandler(this.DmToolStripMenuItem_Click);
+            // 
+            // mToolStripMenuItem
+            // 
+            this.mToolStripMenuItem.Name = "mToolStripMenuItem";
+            this.mToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.mToolStripMenuItem.Text = "m";
+            this.mToolStripMenuItem.Click += new System.EventHandler(this.MToolStripMenuItem_Click);
+            // 
+            // kmToolStripMenuItem
+            // 
+            this.kmToolStripMenuItem.Name = "kmToolStripMenuItem";
+            this.kmToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.kmToolStripMenuItem.Text = "km";
+            this.kmToolStripMenuItem.Click += new System.EventHandler(this.KmToolStripMenuItem_Click);
+            // 
             // calcHist
             // 
             this.calcHist.BackColor = System.Drawing.Color.DimGray;
@@ -656,53 +703,6 @@
             this.label4.Text = "Name:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // unitToolStripMenuItem
-            // 
-            this.unitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mmToolStripMenuItem,
-            this.cmToolStripMenuItem,
-            this.dmToolStripMenuItem,
-            this.mToolStripMenuItem,
-            this.kmToolStripMenuItem});
-            this.unitToolStripMenuItem.Name = "unitToolStripMenuItem";
-            this.unitToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.unitToolStripMenuItem.Text = "Unit";
-            // 
-            // mmToolStripMenuItem
-            // 
-            this.mmToolStripMenuItem.Name = "mmToolStripMenuItem";
-            this.mmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mmToolStripMenuItem.Text = "mm";
-            this.mmToolStripMenuItem.Click += new System.EventHandler(this.MmToolStripMenuItem_Click);
-            // 
-            // cmToolStripMenuItem
-            // 
-            this.cmToolStripMenuItem.Name = "cmToolStripMenuItem";
-            this.cmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cmToolStripMenuItem.Text = "cm";
-            this.cmToolStripMenuItem.Click += new System.EventHandler(this.CmToolStripMenuItem_Click);
-            // 
-            // dmToolStripMenuItem
-            // 
-            this.dmToolStripMenuItem.Name = "dmToolStripMenuItem";
-            this.dmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.dmToolStripMenuItem.Text = "dm";
-            this.dmToolStripMenuItem.Click += new System.EventHandler(this.DmToolStripMenuItem_Click);
-            // 
-            // mToolStripMenuItem
-            // 
-            this.mToolStripMenuItem.Name = "mToolStripMenuItem";
-            this.mToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mToolStripMenuItem.Text = "m";
-            this.mToolStripMenuItem.Click += new System.EventHandler(this.MToolStripMenuItem_Click);
-            // 
-            // kmToolStripMenuItem
-            // 
-            this.kmToolStripMenuItem.Name = "kmToolStripMenuItem";
-            this.kmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kmToolStripMenuItem.Text = "km";
-            this.kmToolStripMenuItem.Click += new System.EventHandler(this.KmToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -754,7 +754,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Geometrical Calculator App by Kun Attila v0.93";
+            this.Text = "Geometrical Calculator App by Kun Attila v0.9.3.1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

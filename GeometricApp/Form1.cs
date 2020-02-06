@@ -671,7 +671,7 @@ namespace GeometricApp
             if ((r_input.Text != "" && alt_input.Text != "") || (alt_input.Text != "" && lsf_input.Text != "") || (r_input.Text != "" && lsf_input.Text != "") || (r_input.Text != "" && v_input.Text != ""))
             {
                 Results.Add(calcStep+". Cylinder | " + name_input.Text);
-                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
+                Results.Add(DateTime.Now.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Radius: " + radius + " " + units[unit]);
                 Results.Add("Length of altitude: " + altitude + " " + units[unit]);
                 Results.Add("Area of the base: " + baseArea + " " + units[unit] + "²");
@@ -713,7 +713,7 @@ namespace GeometricApp
                 a_input.Text = Convert.ToString(baseArea + lateralSurface);
                 v_input.Text = Convert.ToString(volume);
                 Results.Add(calcStep + ". Pyramid | " + name_input.Text);
-                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
+                Results.Add(DateTime.Now.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Number of sides(polygon type): " + polygon);
                 Results.Add("Length of base: " + baseLength + " " + units[unit]);
                 Results.Add("Length of altitude: " + altitude + " " + units[unit]);
@@ -768,7 +768,7 @@ namespace GeometricApp
                 baseArea_input.Text = Convert.ToString(baseArea);
                 v_input.Text = Convert.ToString(volume);
                 Results.Add(calcStep+". Cone | " + name_input.Text);
-                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
+                Results.Add(DateTime.Now.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Radius: " + radius + " " + units[unit]);
                 Results.Add("Length of 'imaginary' side: " + altitude + " " + units[unit]);
                 Results.Add("Length of altitude: " + altitude + " " + units[unit]);
@@ -798,7 +798,7 @@ namespace GeometricApp
                 a_input.Text = Convert.ToString(surfArea);
                 v_input.Text = Convert.ToString(volume);
                 Results.Add(calcStep+". Prism | " + name_input.Text);
-                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
+                Results.Add(DateTime.Now.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Number of sides(polygon type): " + polygon);
                 Results.Add("Length of base: " + baseLength + " " + units[unit]);
                 Results.Add("Length of altitude: " + altitude + " " + units[unit]);
@@ -840,7 +840,7 @@ namespace GeometricApp
             if ((r_input.Text != "") || (v_input.Text != "") || (a_input.Text != ""))
             {
                 Results.Add(calcStep + ". Sphere | " + name_input.Text);
-                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
+                Results.Add(DateTime.Now.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Radius: " + radius + " " + units[unit]);
                 Results.Add("Surface area: " + area + " " + units[unit] + "²");
                 Results.Add("Volume: " + volume + " " + units[unit] + "³");
@@ -891,7 +891,7 @@ namespace GeometricApp
                 a_input.Text = Convert.ToString(Math.Round(surf_area));
                 v_input.Text = Convert.ToString(Math.Round(volume, 2));
                 Results.Add(calcStep+ ". Pyramidal Frustum|" + name_input.Text);
-                Results.Add(DateTime.UtcNow.ToString("yyyy.MM.dd. HH:mm:ss"));
+                Results.Add(DateTime.Now.ToString("yyyy.MM.dd. HH:mm:ss"));
                 Results.Add("Base length: " + baseLength + " " + units[unit]);
                 Results.Add("Top side length: " + topLength + " " + units[unit]);
                 Results.Add("Side of pyramid: " + side + " " + units[unit]);
@@ -956,7 +956,7 @@ namespace GeometricApp
                 v_input.Text = Convert.ToString(volume);
                 Results.Add("---Conical Frustum---");
                 Results.Add("---" + name_input.Text + "---");
-                Results.Add(DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss"));
+                Results.Add(DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss"));
                 Results.Add("Base radius: " + baseRadius + " " + units[unit]);
                 Results.Add("Top radius: " + topRadius + " " + units[unit]);
                 Results.Add("Generatrix: " + generatrix + " " + units[unit]);
