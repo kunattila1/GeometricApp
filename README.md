@@ -13,4 +13,5 @@ An app written in C# (Windows Forms, .NET FW 4.7.2 that can calulate area, volum
 - v0.9.3.1(2020.02.06.): Fixed a small bug, that it would always display UTC time in the output but now it displays your computer's local time.
 - v0.9.3.2 (2020.02.06.): Put error message notification when you put text into number fields(so not the name field but the others).
 
-![Program image](https://files.catbox.moe/dme8ji.PNG)
+![Cylinder](https://files.catbox.moe/dme8ji.PNG)
+![Conical Frustum + Sphere](https://files.catbox.moe/cxj1lq.PNG)
