@@ -478,10 +478,10 @@ namespace GeometricApp
         private void check()
         {
             System.Text.RegularExpressions.Regex regex = null;
-            regex = new System.Text.RegularExpressions.Regex("^([a-zA-Z])");
-            if (regex.IsMatch(alt_input.Text) || regex.IsMatch(r_input.Text) || regex.IsMatch(alt_input.Text) || regex.IsMatch(base_input.Text) || regex.IsMatch(side_input.Text) || regex.IsMatch(topArea_input.Text) || regex.IsMatch(topBase_input.Text) || regex.IsMatch(baseArea_input.Text) || regex.IsMatch(lsf_input.Text) || regex.IsMatch(v_input.Text) || regex.IsMatch(a_input.Text) || regex.IsMatch(p_input.Text))
+            regex = new System.Text.RegularExpressions.Regex("^([0-9]*$)");
+            if (!regex.IsMatch(alt_input.Text) || !regex.IsMatch(r_input.Text) || !regex.IsMatch(alt_input.Text) || !regex.IsMatch(base_input.Text) || !regex.IsMatch(side_input.Text) || !regex.IsMatch(topArea_input.Text) || !regex.IsMatch(topBase_input.Text) || !regex.IsMatch(baseArea_input.Text) || !regex.IsMatch(lsf_input.Text) || !regex.IsMatch(v_input.Text) || !regex.IsMatch(a_input.Text) || !regex.IsMatch(p_input.Text))
             {
-                MessageBox.Show("Number fields cannot contain alphabetic characters.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Number fields cannot contain alphabetic characters or symbols.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 name_input.Text = "";
                 r_input.Text = "";
                 alt_input.Text = "";
