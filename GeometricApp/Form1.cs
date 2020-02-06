@@ -475,47 +475,74 @@ namespace GeometricApp
             calcHist.SelectionStart = calcHist.Text.Length;
             calcHist.ScrollToCaret();
         }
+        private void check()
+        {
+            System.Text.RegularExpressions.Regex regex = null;
+            regex = new System.Text.RegularExpressions.Regex("^([a-zA-Z])");
+            if (regex.IsMatch(alt_input.Text) || regex.IsMatch(r_input.Text) || regex.IsMatch(alt_input.Text) || regex.IsMatch(base_input.Text) || regex.IsMatch(side_input.Text) || regex.IsMatch(topArea_input.Text) || regex.IsMatch(topBase_input.Text) || regex.IsMatch(baseArea_input.Text) || regex.IsMatch(lsf_input.Text) || regex.IsMatch(v_input.Text) || regex.IsMatch(a_input.Text) || regex.IsMatch(p_input.Text))
+            {
+                MessageBox.Show("Number fields cannot contain alphabetic characters.", "Invalid input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                name_input.Text = "";
+                r_input.Text = "";
+                alt_input.Text = "";
+                base_input.Text = "";
+                side_input.Text = "";
+                topArea_input.Text = "";
+                topBase_input.Text = "";
+                baseArea_input.Text = "";
+                lsf_input.Text = "";
+                v_input.Text = "";
+                a_input.Text = "";
+                p_input.Text = "";
+            }
+        }
         public void Button2_Click(object sender, EventArgs e) // Calculate it button
         {
             switch (mode)
             {
                 case 1:
+                    check();
                     Cylinder();
                     calcHist.Lines = Results.ToArray();
                     autoscroll();
                     break;
                 case 2:
+                    check();
                     Pyramid();
                     calcHist.Lines = Results.ToArray();
                     autoscroll();
                     break;
                 case 3:
+                    check();
                     Cone();
                     calcHist.Lines = Results.ToArray();
                     autoscroll();
                     break;
                 case 4:
+                    check();
                     Prism();
                     calcHist.Lines = Results.ToArray();
                     autoscroll();
                     break;
                 case 5:
+                    check();
                     Sphere();
                     calcHist.Lines = Results.ToArray();
                     autoscroll();
                     break;
                 case 6:
+                    check();
                     CFrustum();
                     calcHist.Lines = Results.ToArray();
                     autoscroll();
                     break;
                 case 7:
+                    check();
                     PFrustum();
                     calcHist.Lines = Results.ToArray();
                     autoscroll();
                     break;
                 default: break;
-
             }
         }
         private void Clear_Click(object sender, EventArgs e)
