@@ -686,7 +686,7 @@
             this.name_input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.name_input.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.name_input.ForeColor = System.Drawing.SystemColors.Window;
-            this.name_input.Location = new System.Drawing.Point(164, 34);
+            this.name_input.Location = new System.Drawing.Point(296, 37);
             this.name_input.Name = "name_input";
             this.name_input.Size = new System.Drawing.Size(100, 21);
             this.name_input.TabIndex = 55;
@@ -696,7 +696,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.Color.Lime;
-            this.label4.Location = new System.Drawing.Point(114, 34);
+            this.label4.Location = new System.Drawing.Point(246, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 15);
             this.label4.TabIndex = 56;
