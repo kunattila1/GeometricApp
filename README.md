@@ -1,9 +1,10 @@
 # GeometricApp
 An app written in C# (Windows Forms, .NET FW 4.7.2 that can calulate area, volume, etc. off the datas of the base, side, altitude, etc. of various geometrical bodies. It's still being developed :)
-
+# Images
+![Cylinder](https://files.catbox.moe/dme8ji.PNG)
+![Conical Frustum + Sphere](https://files.catbox.moe/cxj1lq.PNG)
 # TO-DO
 - Connect to a database
-
 # Version history
 - /no version number/ (2020.01.28.): Project started with only 3 bodies. Then extended with others. (2020.01.29/30.)
 - v0.9(2020.02.03.): can write out calculation history into a file, and can show the history. Menubar is added for convenience.
@@ -13,5 +14,4 @@ An app written in C# (Windows Forms, .NET FW 4.7.2 that can calulate area, volum
 - v0.9.3.1(2020.02.06.): Fixed a small bug, that it would always display UTC time in the output but now it displays your computer's local time.
 - v0.9.3.2 (2020.02.06.): Put error message notification when you put text into number fields(so not the name field but the others).
 
-![Cylinder](https://files.catbox.moe/dme8ji.PNG)
-![Conical Frustum + Sphere](https://files.catbox.moe/cxj1lq.PNG)
+
