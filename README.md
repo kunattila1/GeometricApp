@@ -1,8 +1,6 @@
 # Images
 ![Cylinder](https://files.catbox.moe/urdr08.PNG)
 ![Conical Frustum + Sphere](https://files.catbox.moe/90bnnh.PNG)
-# TO-DO
-- Connect to a database
 # Version history
 - /no version number/ (2020.01.28.): Project started with only 3 bodies. Then extended with others. (2020.01.29/30.)
 - v0.9(2020.02.03.): can write out calculation history into a file, and can show the history. Menubar is added for convenience.
