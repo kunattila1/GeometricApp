@@ -754,7 +754,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Geometrical Calculator App by Kun Attila v0.9.3.2";
+            this.Text = "Geometrical Calculator App by Kun Attila v0.9.3.3";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

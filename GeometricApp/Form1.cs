@@ -890,8 +890,9 @@ namespace GeometricApp
                 altitude = Math.Round(Math.Sqrt(Math.Pow(side, 2) - Math.Pow(baseOfTriangle, 2)),2); /* so basically we're calculating the altitude using pythagorean th.
                 * in this means, we calculate a leg and not a hypotenuse, and the "side" is hypotenuse of the trapezium, and baseOfTriangle is the base of the little triangle(s). */
                 topArea = Math.Round(Math.Pow(topLength, 2),2);
+                double altitudeOfSideTrapeziums = Math.Round(Math.Sqrt(Math.Pow(side, 2) - Math.Pow((topLength/2), 2)), 2);
                 baseArea = Math.Round(Math.Pow(baseLength, 2),2);
-                double areaOfTrapezium = Math.Round((baseLength + topLength) / 2 * altitude,2);
+                double areaOfTrapezium = Math.Round((baseLength + topLength) / 2 * altitudeOfSideTrapeziums, 2);
                 volume = Math.Round((altitude / 3) * (baseArea + Math.Sqrt(baseArea*topArea)+topArea),2);
                 lateralSurface = Math.Round(4 * areaOfTrapezium,2); 
                 surf_area = Math.Round(topArea + baseArea + lateralSurface,2);

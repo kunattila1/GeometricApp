@@ -32,3 +32,17 @@ D:\attil\Documents\repos\GeometricApp\GeometricApp\bin\Debug\GeometricApp.exe.ma
 D:\attil\Documents\repos\GeometricApp\GeometricApp\bin\Debug\GeometricApp.application
 D:\attil\Documents\repos\GeometricApp\GeometricApp\obj\Debug\GeometricApp.exe.manifest
 D:\attil\Documents\repos\GeometricApp\GeometricApp\obj\Debug\GeometricApp.application
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\bin\Debug\GeometricApp.exe.config
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\bin\Debug\GeometricApp.exe.manifest
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\bin\Debug\GeometricApp.application
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\bin\Debug\GeometricApp.exe
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\bin\Debug\GeometricApp.pdb
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\obj\Debug\GeometricApp.csprojAssemblyReference.cache
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\obj\Debug\GeometricApp.Form1.resources
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\obj\Debug\GeometricApp.Properties.Resources.resources
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\obj\Debug\GeometricApp.csproj.GenerateResource.cache
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\obj\Debug\GeometricApp.csproj.CoreCompileInputs.cache
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\obj\Debug\GeometricApp.exe.manifest
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\obj\Debug\GeometricApp.application
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\obj\Debug\GeometricApp.exe
+E:\Suli\InfoTech\programozás\!C#\2019-2020 (kurucz korszak)\GeometricApp-master\GeometricApp\obj\Debug\GeometricApp.pdb
