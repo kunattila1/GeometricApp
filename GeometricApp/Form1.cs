@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -894,7 +894,7 @@ namespace GeometricApp
                 double areaOfTrapezium = Math.Round((baseLength + topLength) / 2 * altitude,2);
                 volume = Math.Round((altitude / 3) * (baseArea + Math.Sqrt(baseArea*topArea)+topArea),2);
                 lateralSurface = Math.Round(4 * areaOfTrapezium,2); 
-                surf_area = Math.Round(topArea + baseArea + areaOfTrapezium * 4,2);
+                surf_area = Math.Round(topArea + baseArea + lateralSurface,2);
                 alt_input.Text = Convert.ToString(Math.Round(altitude, 2));
             }
             else if (base_input.Text != "" && alt_input.Text != "" && side_input.Text != "")
@@ -908,7 +908,7 @@ namespace GeometricApp
                 double areaOfTrapezium = Math.Round((baseLength + topLength) / 2 * altitude, 2);
                 volume = Math.Round((altitude / 3) * (baseArea + Math.Sqrt(baseArea * topArea) + topArea), 2);
                 lateralSurface = Math.Round(4 * areaOfTrapezium, 2);
-                surf_area = Math.Round(topArea + baseArea + areaOfTrapezium * 4, 2);
+                surf_area = Math.Round(topArea + baseArea + lateralSurface, 2);
                 side_input.Text = Convert.ToString(Math.Round(side, 2));
                 topBase_input.Text = Convert.ToString(Math.Round(topLength, 2));
             }
