@@ -886,8 +886,9 @@ namespace GeometricApp
                 double thirdsideSmall = Math.Sqrt(2 * Math.Pow(topLength,2));  /*this means the diagonal of the smaller square, 
                 * top of the trapezium inside which we're gonna use to calculate the altitude */
                 double thirdsideLarge = Math.Sqrt(2 * Math.Pow(baseLength, 2)); // this means the diagonal of the larger square / hypotenuse of larger triangle
-                double baseOfTriangle = (thirdsideLarge - thirdsideSmall) / 2;
-                altitude = Math.Round(Math.Sqrt(Math.Pow(side, 2) - Math.Pow(baseOfTriangle, 2)),2);
+                double baseOfTriangle = (thirdsideLarge - thirdsideSmall) / 2; // This means the trapezium's triangle's base, which we need for getting the altitude
+                altitude = Math.Round(Math.Sqrt(Math.Pow(side, 2) - Math.Pow(baseOfTriangle, 2)),2); /* so basically we're calculating the altitude using pythagorean th.
+                * in this means, we calculate a leg and not a hypotenuse, and the "side" is hypotenuse of the trapezium, and baseOfTriangle is the base of the little triangle(s). */
                 topArea = Math.Round(Math.Pow(topLength, 2),2);
                 baseArea = Math.Round(Math.Pow(baseLength, 2),2);
                 double areaOfTrapezium = Math.Round((baseLength + topLength) / 2 * altitude,2);
