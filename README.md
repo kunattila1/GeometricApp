@@ -9,5 +9,6 @@
 - v0.93(2020.02.05.): Added a few SI units to choose from, but the program doesn't convert the numbers if you switch, only just works in other unit. Also, resizing window is disabled, and the calculation history is autoscrolling to the bottom.
 - v0.9.3.1(2020.02.06.): Fixed a small bug, that it would always display UTC time in the output but now it displays your computer's local time.
 - v0.9.3.2 (2020.02.06.): Put error message notification when you put text into number fields(so not the name field but the others).
+- v0.9.3.3 (2020.09.01): Fixed calculations at Pyramidal frustum.
 
 
